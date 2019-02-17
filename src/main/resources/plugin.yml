@@ -1,0 +1,12 @@
+name: DiscordNotifier
+version: "1.1"
+author: NanoDano@DevDungeon.com
+main: com.devdungeon.minecraft.discordnotifier.Plugin
+
+#commands:
+#  hello:
+#    aliases: [hi, hey, yo]
+#    description: Say hello to everyone
+#    usage: |
+#      /<command>
+#      Example: /<command>
