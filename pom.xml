@@ -4,7 +4,7 @@
 
     <artifactId>discordnotifier</artifactId>
     <groupId>com.devdungeon.minecraft</groupId>
-    <version>1.0</version>
+    <version>1.1</version>
     
     <!-- Repositories -->
     <repositories>
