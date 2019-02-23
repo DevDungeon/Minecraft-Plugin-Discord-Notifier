@@ -12,20 +12,11 @@ import java.util.Properties;
 
 class Discord {
 
-    private static String webhookUrl = Discord.loadDiscordConfig();
+    private static String webhookUrl;
 
-    private static String loadDiscordConfig() {
-        InputStream in = Discord.class.getResourceAsStream("/discord_settings.properties");
-        Properties properties = new Properties();
-        try {
-            properties.load(in);
-        } catch (IOException ex) {
-            System.err.println(ex.getMessage());
-            System.exit(1);
-        }
-        return properties.get("webhookUrl").toString();
+    public static void setDiscordWebhook(String newWebhook) {
+        Discord.webhookUrl = newWebhook;
     }
-
 
     static void discordPost(String message) {
 

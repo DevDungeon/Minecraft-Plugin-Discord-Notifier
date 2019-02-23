@@ -3,3 +3,4 @@ target
 .idea
 
 discord_settings.properties
+update_plugin.sh

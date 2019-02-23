@@ -13,6 +13,10 @@ public class Plugin extends JavaPlugin {
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
+        this.saveDefaultConfig();
+        String discordWebhook = this.getConfig().getString("discord-webhook");
+        Discord.setDiscordWebhook(discordWebhook);
+
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
         getLogger().log(Level.INFO, "Initializing Discord Notifier...");
         Bukkit.getPluginManager().registerEvents(
