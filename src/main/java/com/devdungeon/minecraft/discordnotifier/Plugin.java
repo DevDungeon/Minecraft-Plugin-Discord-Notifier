@@ -13,9 +13,15 @@ public class Plugin extends JavaPlugin {
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
-        this.saveDefaultConfig();
+        saveDefaultConfig();
         String discordWebhook = this.getConfig().getString("discord-webhook");
+        String discordBotToken = this.getConfig().getString("discord-bot-token");
+        String primaryChannelName = this.getConfig().getString("discord-primary-channel-id");
+
         Discord.setDiscordWebhook(discordWebhook);
+
+        Thread discordBotThread = new Thread(new DiscordBot(this, discordBotToken, primaryChannelName));
+        discordBotThread.start();
 
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
         getLogger().log(Level.INFO, "Initializing Discord Notifier...");
@@ -34,11 +40,6 @@ public class Plugin extends JavaPlugin {
             return false;
         }
 
-        Bukkit.broadcastMessage("Hello to all!");
-        for (Player player: Bukkit.getOnlinePlayers()) {
-            player.sendMessage("Hello!");
-        }
-
         return true;
     }
 
@@ -47,7 +48,6 @@ public class Plugin extends JavaPlugin {
     public void onDisable() {
         getLogger().log(Level.INFO, "{0}.onDisable()", this.getClass().getName());
     }
-
 
 
 }

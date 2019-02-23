@@ -1,6 +1,6 @@
 target
 *.iml
 .idea
-
+dependency-reduced-pom.xml
 discord_settings.properties
 update_plugin.sh

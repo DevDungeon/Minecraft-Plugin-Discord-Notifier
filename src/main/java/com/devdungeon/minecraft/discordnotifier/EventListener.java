@@ -9,8 +9,6 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import java.util.logging.Level;
-
 
 public class EventListener implements Listener {
 
