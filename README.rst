@@ -18,9 +18,9 @@ Features
 
 - Forwards Minecraft chat to Discord chat channel
 - Notifies when
-    + players join server
-    + players die
-    + players find diamond or gold
+  + players join server
+  + players die
+  + players find diamond or gold
 
 
 Contact
